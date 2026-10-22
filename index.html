@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="My Live Rerun Studio is an independent Windows application in development for multi-channel vertical video playback, preview, overlays, and FFmpeg streaming." />
+  <meta name="theme-color" content="#070911" />
+  <title>My Live Rerun Studio — Multi-channel vertical streaming workspace</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <nav class="container nav" aria-label="Primary navigation">
+      <a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>My Live Rerun Studio<small>Independent Windows application</small></span></a>
+      <button class="menu-button" data-menu-button aria-label="Open navigation" aria-expanded="false">☰</button>
+      <div class="nav-links" data-navigation data-open="false"><a href="index.html" aria-current="page">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="eyebrow">Independent personal development project</p>
+          <h1>Run multiple channels.<br /><span class="gradient-text">Keep every feed in view.</span></h1>
+          <p class="lead">My Live Rerun Studio is a Windows desktop application in active development. It was initially created for personal use to prepare playlists, preview 9:16 video, apply text overlays, and control an independent FFmpeg process for each channel. It may become available to other users in the future.</p>
+          <div class="hero-actions"><a class="button button-primary" href="#features">Explore current features →</a><a class="button button-secondary" href="privacy.html">Read the Privacy Policy</a></div>
+          <p class="trust-note">Independent software developed by an individual developer in Thailand. It is not an official TikTok product and is not presented as approved, sponsored, or endorsed by TikTok.</p>
+        </div>
+        <div class="product-frame" aria-label="Illustration of the five-channel desktop dashboard">
+          <div class="glow"></div>
+          <div class="app-window">
+            <div class="window-bar"><span class="window-dot"></span><span class="window-dot"></span><span class="window-dot"></span><span class="window-title">MY LIVE RERUN STUDIO / DASHBOARD</span></div>
+            <div class="dashboard"><div class="dashboard-head"><span class="dashboard-title"></span><span class="dashboard-status"></span></div><div class="channel-grid">
+              <div class="channel"><div class="preview"></div><div class="channel-name"></div><div class="channel-controls"><span></span><span></span></div></div>
+              <div class="channel"><div class="preview"></div><div class="channel-name"></div><div class="channel-controls"><span></span><span></span></div></div>
+              <div class="channel"><div class="preview"></div><div class="channel-name"></div><div class="channel-controls"><span></span><span></span></div></div>
+              <div class="channel"><div class="preview"></div><div class="channel-name"></div><div class="channel-controls"><span></span><span></span></div></div>
+              <div class="channel"><div class="preview"></div><div class="channel-name"></div><div class="channel-controls"><span></span><span></span></div></div>
+            </div></div>
+          </div>
+          <div class="floating-card"><div class="status-line"><span class="status-dot"></span>Local stream healthy</div><div class="meter"><span></span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="features">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Current capabilities</p><h2>A focused control room for five independent channels</h2><p>These statements describe functionality implemented in the current desktop source. They do not imply access to any platform feature that has not been granted.</p></div>
+        <div class="grid-3">
+          <article class="feature-card"><span class="icon-box">5×</span><h3>Five-channel dashboard</h3><p>Independent playlists, preview state, overlays, streaming settings, and operational logs for each channel.</p><div class="feature-meta">Implemented</div></article>
+          <article class="feature-card"><span class="icon-box">9:16</span><h3>Vertical video preview</h3><p>Portrait previews with Fit, Fill, and Crop modes, plus an expanded view and a compatible preview proxy when needed.</p><div class="feature-meta">Implemented</div></article>
+          <article class="feature-card"><span class="icon-box">FF</span><h3>FFmpeg streaming engine</h3><p>H.264 and AAC output, CPU x264, NVIDIA NVENC when available, process monitoring, and channel-specific logs.</p><div class="feature-meta">Implemented</div></article>
+          <article class="feature-card"><span class="icon-box">↻</span><h3>Playlist loop</h3><p>Add, remove, reorder, and continuously loop local video files with a separate playlist for every channel.</p><div class="feature-meta">Implemented</div></article>
+          <article class="feature-card"><span class="icon-box">RT</span><h3>Local RTMP testing</h3><p>Start, stop, health monitoring, retry backoff, and auto-recovery can be tested against a local RTMP server.</p><div class="feature-meta">Locally tested</div></article>
+          <article class="feature-card"><span class="icon-box">ID</span><h3>Account connection workspace</h3><p>The desktop client contains integration points for official OAuth or QR authorization, but a real Auth Broker is not implemented in this project and real account connection has not been verified.</p><div class="feature-meta pending">Not operational</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Planned connection model</p><h2>Authentication and streaming access are separate</h2><p>The client is designed around official authorization flows and does not rely on private APIs, session extraction, license bypasses, or automated CAPTCHA solving. This integration remains conditional on Developer App configuration, an independently secured Auth Broker, platform permissions, and successful testing.</p></div>
+        <div class="flow">
+          <article class="flow-step"><span class="step-number">01</span><h3>User starts connection</h3><p>The desktop application can begin OAuth or QR authorization after Developer App settings are configured.</p></article>
+          <article class="flow-step"><span class="step-number">02</span><h3>User grants consent</h3><p>TikTok presents its own sign-in and consent experience for the scopes requested by the application.</p></article>
+          <article class="flow-step"><span class="step-number">03</span><h3>Broker would handle tokens</h3><p>A separately implemented server-side Auth Broker would be required to protect the Client Secret, access token, and refresh token. That server is not included in the current project.</p></article>
+          <article class="flow-step"><span class="step-number">04</span><h3>Desktop shows permitted data</h3><p>Basic account information can be displayed only after the user grants the required scope.</p></article>
+        </div>
+        <div class="notice" style="margin-top:24px"><span class="notice-mark">!</span><div><strong>Real TikTok login and LIVE streaming are not verified.</strong><br />Login Kit does not grant LIVE access. Signing in would not automatically provide a Stream Key or permission to start a LIVE. A user must separately have platform LIVE eligibility and an authorized RTMP/RTMPS destination.</div></div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading"><p class="eyebrow">Designed around explicit control</p><h2>Local first, authorized destinations only</h2></div>
+        <div class="check-grid">
+          <div class="check-item"><span class="check">✓</span><span>Local RTMP remains available for development without sending a TikTok LIVE.</span></div>
+          <div class="check-item"><span class="check">✓</span><span>A real destination must be supplied and confirmed by the user before use.</span></div>
+          <div class="check-item"><span class="check">✓</span><span>Desktop secrets are encrypted at rest when operating-system encryption is available.</span></div>
+          <div class="check-item"><span class="check">✓</span><span>Preview playback is isolated from the FFmpeg streaming process.</span></div>
+          <div class="check-item"><span class="check">✓</span><span>Any future public use is intended only for users who are 18 years of age or older.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container cta"><p class="eyebrow">Development status</p><h2>The application is not currently for sale.</h2><p>No sales or subscription offering has been confirmed. General support, privacy, and legal inquiries may be sent to <a href="mailto:bikineznpzd@gmail.com">bikineznpzd@gmail.com</a>. Privacy and Terms must be reviewed again before the application is offered to other users.</p><div class="hero-actions"><a class="button button-primary" href="support.html">View support details</a><a class="button button-secondary" href="terms.html">Read the Terms</a></div></div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><p class="footer-copy">© <span data-year></span> My Live Rerun Studio · Independent software · Not affiliated with TikTok</p><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div></div></footer>
+</body>
+</html>

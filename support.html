@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Support information for My Live Rerun Studio." />
+  <meta name="theme-color" content="#070911" />
+  <title>Support — My Live Rerun Studio</title>
+  <link rel="stylesheet" href="assets/styles.css" />
+  <script src="assets/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="container nav" aria-label="Primary navigation"><a class="brand" href="index.html"><span class="brand-mark" aria-hidden="true"></span><span>My Live Rerun Studio<small>Independent Windows application</small></span></a><button class="menu-button" data-menu-button aria-label="Open navigation" aria-expanded="false">☰</button><div class="nav-links" data-navigation data-open="false"><a href="index.html">Home</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html" aria-current="page">Support</a></div></nav></header>
+
+  <main id="main">
+    <header class="container page-hero"><p class="eyebrow">Support</p><h1>Contact and safe diagnostic guidance.</h1><p class="lead">My Live Rerun Studio is currently a personal development project. Email is available for general support, privacy, and legal inquiries.</p></header>
+
+    <div class="container contact-grid">
+      <section class="contact-card"><p class="eyebrow">Contact details</p><h2>Developer information</h2><p style="color:var(--muted)">The application is developed by an individual developer in Thailand. No company, street address, telephone number, or additional contact channel is claimed.</p>
+        <div class="contact-row"><small>Developer type</small><strong>Individual developer</strong></div>
+        <div class="contact-row"><small>Country</small><strong>Thailand</strong></div>
+        <div class="contact-row"><small>General support</small><strong><a href="mailto:bikineznpzd@gmail.com">bikineznpzd@gmail.com</a></strong></div>
+        <div class="contact-row"><small>Privacy inquiries</small><strong><a href="mailto:bikineznpzd@gmail.com">bikineznpzd@gmail.com</a></strong></div>
+        <div class="contact-row"><small>Legal inquiries</small><strong><a href="mailto:bikineznpzd@gmail.com">bikineznpzd@gmail.com</a></strong></div>
+        <div class="contact-row"><small>Support hours and response target</small><strong>Not established</strong></div>
+      </section>
+
+      <section class="contact-card"><p class="eyebrow">Before requesting help</p><h2>Include safe diagnostic details</h2><div class="support-list">
+        <div><strong>Application environment</strong><br />Application version, Windows version, GPU model, and whether CPU x264 or NVENC was selected.</div>
+        <div><strong>Affected channel</strong><br />Channel number, STOPPED / STARTING / LIVE / RECOVERING / ERROR state, and approximate time of the issue.</div>
+        <div><strong>Media details</strong><br />Container, codec, resolution, and whether the issue occurs in preview, streaming, or both.</div>
+        <div><strong>Relevant log excerpt</strong><br />Review it first. Remove user names, local paths if sensitive, authorization codes, tokens, Stream Keys, and account identifiers.</div>
+      </div></section>
+    </div>
+
+    <section class="section section-alt">
+      <div class="container"><div class="section-heading"><p class="eyebrow">Quick checks</p><h2>Common issues</h2></div><div class="grid-3">
+        <article class="feature-card"><span class="icon-box">01</span><h3>Preview is blank</h3><p>Confirm the file still exists. Unsupported codecs may require the application to generate a local H.264 preview proxy.</p></article>
+        <article class="feature-card"><span class="icon-box">02</span><h3>Local RTMP is unavailable</h3><p>Confirm the local server is listening and that the destination uses `127.0.0.1` or `localhost` with the correct port.</p></article>
+        <article class="feature-card"><span class="icon-box">03</span><h3>Login controls are not operational</h3><p>The current project includes client-side integration points, but real authentication requires a configured Client Key, loopback redirect URI, and a production Auth Broker that is not included.</p></article>
+        <article class="feature-card"><span class="icon-box">04</span><h3>No LIVE permission</h3><p>Login Kit is not LIVE access. Check account eligibility and obtain any RTMP credentials only through an authorized platform channel.</p></article>
+        <article class="feature-card"><span class="icon-box">05</span><h3>CAPTCHA appears</h3><p>Complete verification manually in the official platform interface. The application does not automate or bypass CAPTCHA.</p></article>
+        <article class="feature-card"><span class="icon-box">06</span><h3>Never send credentials</h3><p>Do not include passwords, Client Secrets, authorization codes, access tokens, refresh tokens, session handles, or Stream Keys.</p></article>
+      </div></div>
+    </section>
+
+    <section class="section"><div class="container notice"><span class="notice-mark">i</span><div><strong>Support boundary</strong><br />My Live Rerun Studio cannot grant LIVE eligibility, remove platform restrictions, restore a platform account, or resolve an outage controlled by TikTok or another destination provider. TikTok LIVE streaming has not been verified. Use the relevant provider's official support channel for platform-controlled matters.</div></div></section>
+  </main>
+
+  <footer class="site-footer"><div class="container footer-grid"><p class="footer-copy">© <span data-year></span> My Live Rerun Studio · Independent software · Not affiliated with TikTok</p><div class="footer-links"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="support.html">Support</a></div></div></footer>
+</body>
+</html>
